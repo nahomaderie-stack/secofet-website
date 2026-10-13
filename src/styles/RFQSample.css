@@ -1,0 +1,335 @@
+/* ==========================================================================
+   Request a Quote Section Styles
+   ========================================================================== */
+
+.rfq-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #111315;
+  padding: 100px 24px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.rfq-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.rfq-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.rfq-title {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0b0c0e;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px 0;
+}
+
+.rfq-subtitle {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4b5563;
+  font-weight: 400;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Outer Grey Container Card */
+.rfq-card {
+  background-color: #f7f7f7; /* Soft light grey background matching mockup */
+  border-radius: 12px;
+  padding: 64px 56px;
+  box-sizing: border-box;
+}
+
+/* 2-Column Grid Layout */
+.rfq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input & Select Field Styling */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.field-group label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.field-group input,
+.field-group select {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: #111315;
+  box-sizing: border-box;
+  font-family: inherit;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field-group input::placeholder {
+  color: #9ca3af;
+}
+
+.field-group input:focus,
+.field-group select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+.field-group select:hover {
+  border-color: #9ca3af;
+}
+
+.field-group select:required:invalid {
+  color: #9ca3af;
+}
+
+.field-group select option {
+  background-color: #ffffff;
+  color: #111315;
+  font-family: var(--font-primary);
+}
+
+.field-group select option:checked {
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+/* Select Dropdown Styling */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #6b7280;
+  border-bottom: 2px solid #6b7280;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.select-wrapper:hover::after {
+  border-color: #374151;
+}
+
+.select-wrapper:focus-within::after {
+  border-color: #16a34a;
+  transform: translateY(-30%) rotate(225deg);
+}
+
+.select-wrapper select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 48px;
+}
+
+/* Bottom Action Row */
+.rfq-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.btn-submit-rfq {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 14px 40px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn-submit-rfq:hover {
+  background-color: #01c649;
+  color: #ffffff;
+}
+
+.btn-submit-rfq:active {
+  transform: scale(0.98);
+}
+
+.btn-submit-rfq:disabled {
+  cursor: default;
+}
+
+.btn-submit-rfq.submitted,
+.btn-submit-rfq.submitted:hover {
+  background-color: #15803d;
+  color: #ffffff;
+}
+
+.btn-contact-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: #0b0c0e;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-contact-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.btn-contact-link:hover::after {
+  width: 100%;
+}
+
+.btn-contact-link:hover {
+  opacity: 0.95;
+}
+
+.btn-contact-link .arrow-up-right {
+  transition: transform 0.2s ease;
+}
+
+.btn-contact-link:hover .arrow-up-right,
+.btn-contact-link:focus-visible .arrow-up-right {
+  transform: translate(2px, -2px);
+  /* stroke-width: 3px; */
+}
+html {
+  scroll-behavior: smooth;
+}
+.btn-submit-rfq.submitted {
+  background: #b5b5b5;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.btn-submit-rfq.submitted:hover {
+  transform: none;
+  box-shadow: none;
+}
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: #f1f1f1;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .rfq-section {
+    width: 100%;
+    background-color: #ffffff;
+    color: #111315;
+    padding: 100px 40px;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+  }
+  .rfq-card {
+    padding: 36px 24px;
+  }
+
+  .rfq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .rfq-section {
+    padding: 50px 20px;
+  }
+  .rfq-header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .rfq-title {
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0b0c0e;
+    letter-spacing: -0.025em;
+    margin: 0 0 20px 0;
+  }
+  .rfq-subtitle {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #4b5563;
+    font-weight: 400;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .field-group label {
+    font-size: 0.85rem;
+  }
+  .rfq-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .btn-submit-rfq {
+    width: 100%;
+    font-size: var(--text-xs);
+  }
+
+  .btn-contact-link {
+    text-align: center;
+    font-size: var(--text-xs);
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Quality Control Section Styles (Interactive Accordion)
+   ========================================================================== */
+
+.qc-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #111315;
+  padding: 100px 24px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.qc-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* --- Top Header Area --- */
+.qc-header {
+  text-align: left;
+  max-width: 820px;
+  margin-bottom: 72px;
+}
+
+.qc-main-title {
+  font-size: clamp(3rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #0b0c0e;
+  letter-spacing: -0.03em;
+  margin: 0 0 28px 0;
+}
+
+.qc-lead-text {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #0b0c0e;
+  letter-spacing: -0.015em;
+  margin: 0 0 20px 0;
+}
+
+.qc-goal-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --- 2-Column Split Content --- */
+.qc-split-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Left Subtitle Column */
+.qc-left-col {
+  text-align: left;
+  position: sticky;
+  top: 100px;
+}
+
+.qc-subtitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0b0c0e;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Right Checkpoints Accordion Column */
+.qc-right-col {
+  width: 100%;
+}
+
+.qc-checkpoints-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.qc-checkpoint-item {
+  border-bottom: 1px solid #d1d5db;
+  text-align: left;
+  transition: border-color 0.2s ease;
+}
+
+/* Trigger Button Row */
+.checkpoint-header-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  color: #0b0c0e;
+  outline: none;
+}
+
+.checkpoint-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0b0c0e;
+  margin: 0;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+/* .checkpoint-header-btn:hover .checkpoint-title {
+    color: #0066ff;
+} */
+
+/* + / - Toggle Icon */
+.checkpoint-toggle-icon {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0b0c0e;
+  line-height: 1;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+/* Smooth Accordion Expansion */
+.checkpoint-body {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease;
+  opacity: 0;
+}
+
+.qc-checkpoint-item.open .checkpoint-body {
+  max-height: 120px;
+  opacity: 1;
+  padding-bottom: 20px;
+}
+
+.checkpoint-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4b5563;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .qc-section {
+    width: 100%;
+    background-color: #ffffff;
+    color: #111315;
+    padding: 35px 40px 155px;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+  }
+  .qc-split-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .qc-left-col {
+    position: static;
+  }
+
+  .qc-header {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .qc-section {
+    padding: 40px 20px;
+  }
+  .qc-main-title {
+    font-size: clamp(1.6rem, 6.5vw, 2.1rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0b0c0e;
+    letter-spacing: -0.03em;
+    margin: 0 0 28px 0;
+  }
+  .qc-lead-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #0b0c0e;
+    letter-spacing: -0.015em;
+    margin: 0 0 20px 0;
+  }
+  .qc-goal-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #4b5563;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .qc-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .checkpoint-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0b0c0e;
+    margin: 0;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+  }
+  .checkpoint-desc {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #4b5563;
+    font-weight: 400;
+    margin: 0;
+  }
+}

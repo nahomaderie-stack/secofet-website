@@ -1,0 +1,162 @@
+/* ==========================================================================
+   404 Page Not Found Styles
+   ========================================================================== */
+
+.notfound-section {
+  width: 100%;
+  min-height: 75vh;
+  background-color: #ffffff;
+  /* Dark deep green matching brand palette */
+  color: #ffffff;
+  padding: 120px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.notfound-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Outlined Pill Badge */
+.notfound-section .badge-wrapper {
+  margin-bottom: 24px;
+}
+
+.notfound-section .pill-badge-outline {
+  display: inline-block;
+  padding: 6px 20px;
+  border: 1.5px solid rgba(41, 41, 41, 0.4);
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #070707;
+  background: transparent;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Typography */
+.notfound-title {
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #040404;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px 0;
+}
+
+.notfound-desc {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #090909;
+  font-weight: 300;
+  margin: 0 0 40px 0;
+  max-width: 600px;
+}
+
+/* Actions */
+.notfound-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary-green {
+  background-color: #009e3a;
+  color: #ffffff;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: var(--text-s);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.btn-primary-green:hover {
+  background-color: #01c649;
+  color: #ffffff;
+}
+
+.btn-primary-green:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary-outline {
+  background-color: transparent;
+  color: #0c0c0c;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: var(--text-s);
+  font-weight: 700;
+  border: 1.5px solid rgba(42, 42, 42, 0.3);
+  text-decoration: none;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-secondary-outline:hover {
+  border-color: #01c649;
+  background-color: #01c649;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .notfound-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #090909;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+    max-width: 600px;
+  }
+}
+@media (max-width: 640px) {
+  .notfound-section {
+    padding: 80px 20px;
+  }
+  .notfound-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #090909;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+    max-width: 600px;
+  }
+
+  .notfound-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-secondary-outline {
+    font-size: var(--text-xs);
+    padding: 14px 28px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .btn-primary-green {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 40px;
+    font-size: var(--text-xs);
+  }
+}

@@ -1,0 +1,57 @@
+/* Sticky Navigation Bar for Operations Flow */
+.inside-secofet-nav-bar {
+    position: sticky;
+    top: 70px;
+    /* Sits directly beneath main Header */
+    z-index: 90;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 16px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+.nav-bar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.inside-nav-btn {
+    background: transparent;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.inside-nav-btn:hover {
+    color: #0b0c0e;
+}
+
+.inside-nav-btn.active {
+    color: #0b0c0e;
+    font-weight: 800;
+}
+
+.nav-pipe {
+    color: #d1d5db;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+@media (max-width: 600px) {
+    .inside-secofet-nav-bar {
+        top: 60px;
+        padding: 12px 16px;
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,499 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+  .work-section .work-title {
+    font-size: clamp(1.5rem, 4.2vw, 2.3rem);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .work-section .work-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-container {
+    padding-inline: 25px;
+  }
+
+  .about-section,
+  .about-secofet-section,
+  .secofet-detail-section,
+  .what-we-do-section,
+  .mission-vision-section,
+  .core-values-section,
+  .team-section,
+  .work-section,
+  .why-section,
+  .categories-section,
+  .inside-secofet-section,
+  .farms-grid-section,
+  .qc-section,
+  .our-coffees-grid-section,
+  .coffees-detail-section,
+  .origins-section,
+  .origins-grid-section,
+  .origins-wrapper,
+  .contact-section,
+  .faq-section,
+  .rfq-section,
+  .legal-page-section,
+  .notfound-section {
+    padding-block: 80px;
+    padding-inline: 25px;
+  }
+
+  .processing-header-area,
+  .processing-dark-area {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section,
+  .about-secofet-section,
+  .secofet-detail-section,
+  .what-we-do-section,
+  .mission-vision-section,
+  .core-values-section,
+  .team-section,
+  .work-section,
+  .why-section,
+  .categories-section,
+  .inside-secofet-section,
+  .farms-grid-section,
+  .qc-section,
+  .our-coffees-grid-section,
+  .coffees-detail-section,
+  .origins-section,
+  .origins-grid-section,
+  .origins-wrapper,
+  .contact-section,
+  .faq-section,
+  .rfq-section,
+  .legal-page-section {
+    padding-block: 64px;
+    padding-inline: 16px;
+  }
+
+  .notfound-section {
+    padding: 72px 16px;
+  }
+
+  .processing-header-area {
+    padding: 64px 16px 40px;
+  }
+
+  .processing-dark-area {
+    padding: 64px 16px;
+  }
+
+  .contact-title,
+  .rfq-title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.12;
+  }
+
+  .faq-main-title {
+    font-size: clamp(2rem, 8.5vw, 2.6rem);
+    line-height: 1.12;
+  }
+
+  .legal-title {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    line-height: 1.12;
+  }
+
+  .origins-grid-title,
+  .origins-wrapper .origins-title {
+    font-size: clamp(1.9rem, 8vw, 2.3rem);
+    line-height: 1.15;
+  }
+
+  .contact-header,
+  .faq-header,
+  .rfq-header,
+  .origins-grid-header,
+  .inside-header,
+  .categories-header,
+  .core-values-header,
+  .origins-header {
+    margin-bottom: 40px;
+  }
+
+  .contact-map-section {
+    padding: 0 16px 64px;
+  }
+
+  .map-frame-wrapper {
+    height: min(350px, 85vw);
+    min-height: 260px;
+  }
+}
+
+/* Responsive type scale: reduce display and lead text slightly at smaller
+   widths while keeping ordinary copy and controls comfortably readable. */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-section .hero-title {
+    font-size: clamp(36px, 4.8vw, 48px);
+  }
+
+  .our-coffees-hero .hero-main-title {
+    font-size: clamp(2rem, 4.7vw, 3rem);
+  }
+
+  .origins-hero .origins-hero-title {
+    font-size: clamp(2rem, 4.9vw, 3rem);
+  }
+
+  .about-section .about-heading,
+  .core-values-section .core-values-title,
+  .categories-section .categories-title {
+    font-size: clamp(2rem, 3.5vw, 2.9rem);
+  }
+
+  .what-we-do-section .what-we-do-title {
+    font-size: clamp(1.85rem, 2.8vw, 2.6rem);
+  }
+
+  .about-secofet-section .about-secofet-title {
+    font-size: clamp(2.2rem, 3.7vw, 3.2rem);
+  }
+
+  .secofet-detail-section .detail-title {
+    font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+  }
+
+  .mission-vision-section .mission-title,
+  .mission-vision-section .vision-title,
+  .why-section .why-heading,
+  .origins-section .origins-title {
+    font-size: clamp(2.1rem, 3.8vw, 3.1rem);
+  }
+
+  .team-section .team-title,
+  .inside-secofet-section .inside-title {
+    font-size: clamp(1.85rem, 3.3vw, 2.8rem);
+  }
+
+  .coffees-detail-section .detail-main-title {
+    font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  }
+
+  .our-coffees-grid-section .coffees-title {
+    font-size: clamp(2.6rem, 4.5vw, 3.25rem);
+  }
+
+  .origins-grid-section .origins-grid-title {
+    font-size: 2.8rem;
+  }
+
+  .origins-wrapper .origins-title {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+  }
+
+  .contact-section .contact-title,
+  .rfq-section .rfq-title,
+  .legal-page-section .legal-title {
+    font-size: clamp(2.5rem, 4.4vw, 3.7rem);
+  }
+
+  .faq-section .faq-main-title {
+    font-size: clamp(2.35rem, 4vw, 3.3rem);
+  }
+
+  .notfound-section .notfound-title {
+    font-size: clamp(2.8rem, 5.5vw, 4.3rem);
+  }
+
+  .notfound-section .notfound-desc,
+  .contact-section .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .farms-grid-section .farms-title,
+  .export-logistics-section .export-main-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  .qc-section .qc-main-title {
+    font-size: clamp(2.7rem, 4.5vw, 3.9rem);
+  }
+
+  .processing-header-area .processing-main-title {
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+  }
+
+  .inside-secofet-section .card-overlay-title {
+    font-size: clamp(1.7rem, 2.2vw, 2.5rem);
+  }
+
+  .about-section .about-description,
+  .about-section .about-cta-text,
+  .secofet-detail-section .detail-lead-text,
+  .mission-vision-section .vision-description,
+  .origins-section .lead-paragraph,
+  .faq-section .faq-question-text,
+  .export-logistics-section .export-sub-title,
+  .contact-map-section .map-location-title {
+    font-size: 1.05rem;
+  }
+
+  .export-logistics-section .export-sub-title,
+  .contact-map-section .map-location-title {
+    font-size: 1.2rem;
+  }
+
+  .why-section .why-subheading,
+  .why-section .why-list-heading,
+  .processing-grading-section .tab-title-text,
+  .origins-wrapper .origins-item,
+  .origins-section .origin-item-btn {
+    font-size: 1.05rem;
+  }
+
+  .origins-wrapper .spec-value,
+  .contact-section .column-title {
+    font-size: 1.05rem;
+  }
+
+  .origins-grid-section .card-title {
+    font-size: 1.2rem;
+  }
+
+  .processing-grading-section .process-display-title {
+    font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+  }
+
+  .core-values-section .value-headline {
+    font-size: 1.25rem;
+  }
+
+  .qc-section .checkpoint-title {
+    font-size: 1.05rem;
+  }
+
+  .legal-page-section .legal-block h2 {
+    font-size: 1.3rem;
+  }
+
+  .legal-page-section .legal-block p,
+  .legal-page-section .legal-block li {
+    font-size: 0.95rem;
+  }
+
+  .header-nav .nav-link,
+  .inside-secofet-section .tab-btn,
+  .inside-secofet-nav-bar .inside-nav-btn,
+  .hero-section .btn-secondary,
+  .our-coffees-hero .btn-secondary,
+  .origins-hero .btn-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section .hero-title {
+    font-size: clamp(1.75rem, 7.5vw, 2.25rem);
+  }
+
+  .our-coffees-hero .hero-main-title {
+    font-size: clamp(1.8rem, 7.5vw, 2.35rem);
+  }
+
+  .origins-hero .origins-hero-title {
+    font-size: clamp(1.8rem, 7.5vw, 2.25rem);
+  }
+
+  .about-section .about-heading,
+  .why-section .why-heading,
+  .categories-section .categories-title {
+    font-size: clamp(1.8rem, 7.5vw, 2.25rem);
+    line-height: 1.15;
+  }
+
+  .what-we-do-section .what-we-do-title,
+  .mission-vision-section .mission-title,
+  .mission-vision-section .vision-title,
+  .core-values-section .core-values-title,
+  .inside-secofet-section .inside-title,
+  .coffees-detail-section .detail-main-title,
+  .origins-section .origins-title {
+    font-size: clamp(1.8rem, 5vw, 2rem);
+    line-height: 1.15;
+  }
+
+  .about-secofet-section .about-secofet-title,
+  .secofet-detail-section .detail-title {
+    font-size: clamp(1.85rem, 7vw, 2.3rem);
+    line-height: 1.15;
+  }
+
+  .team-section .team-title {
+    font-size: 1.9rem;
+  }
+
+  .work-section .work-title {
+    font-size: 1.7rem;
+  }
+
+  .our-coffees-grid-section .coffees-title {
+    font-size: clamp(1.9rem, 5.5vw, 2.3rem);
+  }
+
+  .origins-grid-section .origins-grid-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.15rem);
+  }
+
+  .origins-wrapper .origins-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.1rem);
+  }
+
+  .contact-section .contact-title,
+  .rfq-section .rfq-title,
+  .legal-page-section .legal-title,
+  .faq-section .faq-main-title {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+    line-height: 1.12;
+  }
+
+  .notfound-section .notfound-title {
+    font-size: clamp(2.35rem, 8vw, 2.85rem);
+  }
+
+  .notfound-section .notfound-desc {
+    font-size: 1rem;
+  }
+
+  .farms-grid-section .farms-title,
+  .export-logistics-section .export-main-title,
+  .processing-header-area .processing-main-title {
+    font-size: clamp(1.9rem, 7.5vw, 2.4rem);
+    line-height: 1.15;
+  }
+
+  .qc-section .qc-main-title {
+    font-size: clamp(2rem, 7.5vw, 2.55rem);
+    line-height: 1.12;
+  }
+
+  .inside-secofet-section .card-overlay-title {
+    font-size: 1.65rem;
+  }
+
+  .about-section .about-description,
+  .about-section .about-cta-text,
+  .secofet-detail-section .detail-lead-text,
+  .mission-vision-section .vision-description,
+  .origins-section .sub-paragraph,
+  .origins-section .origin-dynamic-desc,
+  .contact-section .contact-subtitle,
+  .faq-section .faq-question-text,
+  .qc-section .qc-lead-text {
+    font-size: 1rem;
+  }
+
+  .origins-section .lead-paragraph {
+    font-size: 1.05rem;
+  }
+
+  .export-logistics-section .export-sub-title {
+    font-size: 1.1rem;
+  }
+
+  .about-section .about-description {
+    font-size: 0.98rem;
+  }
+
+  .what-we-do-section .what-we-do-text-body p,
+  .secofet-detail-section .detail-sub-text,
+  .legal-page-section .legal-block p,
+  .legal-page-section .legal-block li,
+  .origins-grid-section .origins-grid-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .about-secofet-section .btn-sample-underline,
+  .about-secofet-section .btn-quote-white,
+  .about-section .btn-secondary,
+  .work-section .btn-link-underline,
+  .work-section .btn-pill-dark,
+  .contact-section .btn-contact-link,
+  .rfq-section .btn-contact-link,
+  .inside-secofet-section .tab-btn,
+  .inside-secofet-nav-bar .inside-nav-btn,
+  .header-nav .nav-link,
+  .mobile-nav a,
+  .footer-section .footer-tagline,
+  .origins-section .btn-request-sample {
+    font-size: 0.95rem;
+  }
+
+  .hero-section .btn-primary {
+    font-size: 1rem;
+  }
+
+  .secofet-detail-section .stat-value {
+    font-size: clamp(2.7rem, 10vw, 3.1rem);
+  }
+
+  .secofet-detail-section .stat-unit {
+    font-size: 1.15rem;
+  }
+
+  .secofet-detail-section .stat-suffix {
+    font-size: 2.4rem;
+  }
+
+  .why-section .why-subheading,
+  .why-section .why-list-heading,
+  .processing-grading-section .tab-title-text,
+  .origins-wrapper .origins-item,
+  .origins-section .origin-item-btn,
+  .team-section .member-name,
+  .origins-wrapper .spec-value,
+  .contact-section .column-title {
+    font-size: 1rem;
+  }
+
+  .contact-section .column-title,
+  .contact-map-section .map-location-title,
+  .processing-grading-section .tab-title-text {
+    font-size: 1.1rem;
+  }
+
+  .origins-grid-section .card-title {
+    font-size: 1.1rem;
+  }
+
+  .processing-grading-section .process-display-title {
+    font-size: clamp(1.8rem, 5.5vw, 2rem);
+  }
+
+  .origins-grid-section .info-icon span {
+    font-size: 3rem;
+  }
+
+  .qc-section .qc-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .qc-section .checkpoint-title {
+    font-size: 1rem;
+  }
+
+  .team-section .hover-name {
+    font-size: 1.15rem;
+  }
+
+  .core-values-section .value-headline {
+    font-size: 1.1rem;
+  }
+
+  .legal-page-section .legal-block h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-section .newsletter-heading {
+    font-size: 1.25rem;
+  }
+}

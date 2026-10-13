@@ -1,0 +1,147 @@
+/* ==========================================================================
+   Contact Map Standalone Section Styles
+   ========================================================================== */
+
+.contact-map-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 24px 100px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.contact-map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  /* height: 10px; */
+  margin: 0 auto;
+}
+
+/* Floating Info Card Overlay */
+.map-header-card {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  max-width: 320px;
+  text-align: left;
+}
+
+.map-tag {
+  color: #0b0c0e;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.map-location-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0b0c0e;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.map-location-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0 0 18px 0;
+}
+
+.btn-open-maps {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-open-maps:hover {
+  background-color: #01c649;
+  color: #ffffff;
+}
+
+/* Map Frame Container */
+.map-frame-wrapper {
+  width: 100%;
+  height: 650px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.yirgacheffe-map-iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .contact-map-section {
+    padding: 0 40px 20px;
+  }
+
+  .map-header-card {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    margin-bottom: 16px;
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+    box-sizing: border-box;
+  }
+
+  .map-frame-wrapper {
+    height: 350px;
+    border-radius: 16px;
+  }
+
+  .spec-value {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-map-section {
+    padding: 0 16px 60px;
+  }
+
+  .map-header-card {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    margin-bottom: 16px;
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+    box-sizing: border-box;
+  }
+
+  .map-frame-wrapper {
+    height: 350px;
+    border-radius: 16px;
+  }
+}

@@ -1,0 +1,285 @@
+/* Container setup */
+.origins-hero {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  box-sizing: border-box;
+}
+
+/* Background Image Layer */
+.origins-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 100%;
+  background-image: url('../assets/Images/ethiopian-green-coffee-drying-24.webp');
+  background-size: cover;
+  background-position: bottom;
+  z-index: 1;
+}
+
+/* Dark gradient overlay to ensure readable white text */
+.origins-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+/* Hero Content Area */
+.origins-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 210px 2px 0px;
+  box-sizing: border-box;
+}
+
+/* Heading Typography */
+.origins-hero-title {
+  font-size: var(--text-hero-primary-2);
+  max-width: 1200px;
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  margin: 0 0 16px 0;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+}
+
+/* Serif Italic Styling for "of Ethiopian Coffee" */
+.origins-hero-italic {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Paragraph Description */
+.origins-hero-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 36px 0;
+  max-width: 620px;
+}
+
+/* Action Buttons Container */
+.origins-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Main Pill Button */
+.origins-hero .btn-primary {
+  background-color: #ffffff;
+  color: #111827;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.origins-hero .btn-primary:hover {
+  background-color: #01c649;
+  color: #ffffff;
+}
+
+.origins-hero .btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* Secondary Text Link with Arrow */
+.btn-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 2px;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.btn-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.btn-link:hover {
+  opacity: 0.85;
+}
+
+.btn-link:hover::after {
+  width: 100%;
+}
+
+.origins-hero .btn-link:hover .arrow-up-right,
+.origins-hero .btn-link:focus-visible .arrow-up-right {
+  transform: translate(2px, -2px);
+}
+
+.origins-hero .arrow-up-right {
+  transition: transform 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .origins-hero {
+    height: auto;
+    min-height: 92vh;
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .origins-hero-content {
+    padding: 5px 40px 75px;
+  }
+
+  .origins-hero-title {
+    font-size: clamp(34px, 4.8vw, 45px);
+    line-height: 1.1;
+    margin: 0 0 16px;
+  }
+
+  .origins-hero-description {
+    max-width: 560px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .origins-hero {
+    min-height: 85vh;
+    padding: 0;
+  }
+
+  .origins-hero-content {
+    padding: 50px 20px 90px;
+  }
+
+  .origins-hero-title {
+    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+    line-height: 1.15;
+    margin: 0 0 14px;
+  }
+
+  .origins-hero-description {
+    max-width: 560px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .origins-hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .origins-hero .btn-primary {
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+    font-size: var(--text-xs);
+  }
+
+  .origins-hero .btn-link {
+    align-self: center;
+    font-size: var(--text-xs);
+  }
+
+  .origins-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.75) 70%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .origins-hero {
+    min-height: 88vh;
+    padding: 0;
+  }
+
+  .origins-hero-content {
+    padding: 5px 40px 55px;
+  }
+
+  .origins-hero-title {
+    font-size: clamp(1.4rem, 6.5vw, 2.1rem);
+    line-height: 1.15;
+  }
+
+  .origins-hero-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 550px;
+  }
+
+  .origins-hero-actions {
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .origins-hero .btn-primary,
+  .origins-hero .btn-link {
+    font-size: var(--text-xs);
+  }
+}
+
+@media (max-width: 320px) {
+  .origins-hero {
+    min-height: 92vh;
+    padding: 0;
+  }
+
+  .origins-hero-content {
+    padding: 5px 20px 75px;
+  }
+
+  .origins-hero-title {
+    font-size: clamp(1.35rem, 6.5vw, 2.1rem);
+  }
+}

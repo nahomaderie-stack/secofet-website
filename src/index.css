@@ -1,0 +1,314 @@
+/* ========================================
+   FONT FACES
+======================================== */
+
+/* ---------- Poppins ---------- */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ---------- Sole Serif Big Display ---------- */
+
+@font-face {
+  font-family: 'Sole Serif Big Display';
+  src: url('/fonts/sole-serif-big-display-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sole Serif Big Display';
+  src: url('/fonts/sole-serif-big-display-bold-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sole Serif Big Display';
+  src: url('/fonts/sole-serif-big-display-black-italic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ========================================
+   DESIGN TOKENS
+======================================== */
+
+:root {
+  /* ========================================
+   FONT FAMILIES
+======================================== */
+  /* Font Families */
+  --font-primary: 'Poppins', Arial, Helvetica, sans-serif;
+  --font-secondary: 'Sole Serif Big Display', serif;
+
+  /* Poppins Weights */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  /* Sole Serif Weights */
+  --font-serif-regular: 400;
+  --font-serif-bold: 700;
+  --font-serif-black: 900;
+
+  /* ========================================
+   FONT SIZES
+======================================== */
+
+  /* Body & UI */
+  --text-2xs: 12px;
+  --text-xs: 14px;
+  --text-s: 15px;
+  --text-sm: 16px;
+  --text-md: 18px;
+  --text-base: 21px;
+  --text-lg: 24px;
+
+  /* Headings */
+  --text-h4: 28px;
+  --text-h3: 34px;
+  --text-h2: 48px;
+  --text-h1: 56px;
+
+  /* Hero */
+  --text-hero-primary: 62px;
+  --text-hero-primary-2: 64px;
+  --text-hero-secondary: 74px;
+
+  /* ========================================
+   LINE HEIGHTS
+======================================== */
+  /* Line Heights */
+  --leading-display: 1.05;
+  --leading-heading: 1.15;
+  --leading-subheading: 1.3;
+  --leading-body: 1.6;
+  --leading-small: 1.4;
+
+  /* Large Display */
+  --leading-2: 2;
+  --leading-2-2: 2.2;
+  --leading-2-4: 2.4;
+
+  /* ========================================
+   LETTER SPACING TOKENS
+======================================== */
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.04em;
+  --tracking-widest: 0.08em;
+
+  /* ========================================
+   SPACING TOKENS
+======================================== */
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ========================================
+   BORDER RADIUS TOKENS
+======================================== */
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ========================================
+   SHADOW TOKENS
+======================================== */
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.15);
+
+  /* ========================================
+   COLOR TOKENS
+======================================== */
+
+  /* Primary Green */
+  --color-primary: #069f39;
+  --color-primary-light: #38b000;
+
+  /* Green Variations */
+  --color-green-1: #069f39;
+  --color-green-2: #38b000;
+  --color-green-3: #008000;
+  --color-green-4: #007200;
+  --color-green-5: #006400;
+  --color-green-6: #70e000;
+
+  /* Background */
+  --color-background-dark: #000000;
+  --color-background-dark-2: #121518;
+  --color-background-light: #ffffff;
+
+  /* Text */
+  --color-text-dark: #000000;
+  --color-text-dark-2: #121518;
+  --color-text-dark-3: #323232;
+  --color-text-light: #ffffff;
+  --color-text-light-2: #dfdfdf;
+  --color-text-light-3: #f0f0f0;
+  --color-text-light-4: #f0f0f0d0;
+
+  /* Accent */
+  --color-accent: #069f39;
+  --color-secondary-accent: #38b000;
+}

@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Secofet Legal Pages Styles (Light Theme)
+   ========================================================================== */
+
+.legal-page-section {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #ffffff;
+  /* Clean white background */
+  color: #111315;
+  /* Charcoal/black primary text */
+  padding: 100px 24px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.legal-page-container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Header Element */
+.legal-header {
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.legal-page-section .badge-wrapper {
+  margin-bottom: 20px;
+}
+
+.legal-page-section .pill-badge-outline {
+  display: inline-block;
+  padding: 6px 20px;
+  border: 1.5px solid #000000;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #000000;
+  background: transparent;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.legal-title {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0b0c0e;
+  letter-spacing: -0.025em;
+  margin: 0 0 12px 0;
+}
+
+.legal-last-updated {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Content Blocks */
+.legal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.legal-block h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0b0c0e;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+}
+
+.legal-block p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #374151;
+  font-weight: 400;
+  margin: 0 0 16px 0;
+}
+
+.legal-block ul {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legal-block li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  font-weight: 400;
+}
+
+.legal-block strong {
+  color: #0b0c0e;
+  font-weight: 700;
+}
+
+/* Footer Navigation Block */
+.legal-footer-nav {
+  margin-top: 32px;
+  padding: 28px 32px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.legal-footer-nav p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.btn-legal-action {
+  background-color: var(--color-green-4);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn-legal-action:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-legal-action:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .legal-page-section {
+    width: 100%;
+    min-height: 82vh;
+    background-color: #ffffff;
+    color: #111315;
+    padding: 75px 40px 100px;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+  }
+}
+@media (max-width: 640px) {
+  .legal-page-section {
+    padding: 45px 20px;
+  }
+  .legal-title {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0b0c0e;
+    letter-spacing: -0.025em;
+    margin: 0 0 12px 0;
+  }
+  .legal-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .legal-block h2 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0b0c0e;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.01em;
+  }
+  .legal-block p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #374151;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+  }
+
+  .legal-footer-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-legal-action {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,252 @@
+.our-coffees-grid-section {
+  width: 100%;
+  padding: 100px 24px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #111315;
+  font-family: var(--font-primary);
+}
+
+.coffees-grid-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.coffees-header {
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+.category-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: #4b5563;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.coffees-title {
+  margin: 0 0 20px;
+  color: #0b0c0e;
+  font-size: var(--text-h1);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.coffees-subtitle {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Keep all five grades on one line; narrower screens can scroll the row. */
+.category-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(216px, 1fr));
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  padding: 4px 4px 12px;
+  box-sizing: border-box;
+}
+
+/* Match the Core Values cards and their smooth green hover state. */
+.coffee-grade-card {
+  position: relative;
+  min-height: 360px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  border-radius: 5px;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #e8e8e8;
+  text-align: left;
+  transform: translateZ(0);
+  will-change: transform;
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.coffee-grade-card::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--color-primary);
+  content: '';
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+  will-change: opacity, transform;
+  transition:
+    opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.grade-icon-badge,
+.grade-category,
+.grade-headline,
+.grade-description {
+  position: relative;
+  z-index: 1;
+}
+
+.grade-icon-badge {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition:
+    background-color 0.35s ease,
+    color 0.1s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.grade-category {
+  margin-bottom: 12px;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition:
+    color 0.1s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.grade-headline {
+  margin: 0 0 24px;
+  color: #0b0c0e;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  transition:
+    color 0.1s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.grade-description {
+  margin: auto 0 0;
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.55;
+  transition:
+    color 0.1s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.coffee-grade-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 102, 255, 0.18);
+}
+
+.coffee-grade-card:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.coffee-grade-card:hover .grade-icon-badge {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+  transition-delay: 0.02s;
+}
+
+.coffee-grade-card:hover .grade-category {
+  color: #d1d5db;
+  transform: translateY(-3px);
+  transition-delay: 0.05s;
+}
+
+.coffee-grade-card:hover .grade-headline,
+.coffee-grade-card:hover .grade-description {
+  color: #ffffff;
+}
+
+.coffee-grade-card:hover .grade-headline {
+  transform: translateY(-4px);
+  transition-delay: 0.08s;
+}
+
+.coffee-grade-card:hover .grade-description {
+  transform: translateY(-4px);
+  transition-delay: 0.1s;
+}
+
+@media (max-width: 1024px) {
+  .our-coffees-grid-section {
+    padding: 75px 40px;
+  }
+
+  .coffees-title {
+    font-size: var(--text-h2);
+  }
+}
+
+@media (max-width: 640px) {
+  .our-coffees-grid-section {
+    padding: 45px 20px;
+  }
+
+  .coffees-header {
+    margin-bottom: 36px;
+  }
+
+  .category-kicker {
+    font-size: 0.75rem;
+  }
+
+  .coffees-title {
+    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+  }
+
+  .coffees-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .category-cards-grid {
+    grid-template-columns: repeat(5, minmax(216px, 1fr));
+    gap: 16px;
+  }
+
+  .coffee-grade-card {
+    min-height: 320px;
+    padding: 28px 24px;
+  }
+
+  .grade-headline {
+    font-size: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coffee-grade-card,
+  .coffee-grade-card::before,
+  .grade-icon-badge,
+  .grade-category,
+  .grade-headline,
+  .grade-description {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}

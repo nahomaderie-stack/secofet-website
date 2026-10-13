@@ -1,0 +1,368 @@
+/* ==========================================================================
+   Secofet Team Showcase Section
+   ========================================================================== */
+
+.team-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #111315;
+  padding: 100px 24px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.team-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* --- Header Layout --- */
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge-outline {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1.5px solid #000000;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.team-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0b0c0e;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-align: left;
+}
+
+/* --- Slider Controls --- */
+
+.slider-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.slider-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.slider-btn:hover {
+  opacity: 0.88;
+}
+
+.slider-btn:active {
+  transform: scale(0.95);
+}
+
+/* --- Carousel Container --- */
+
+.team-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.team-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Team Card Base --- */
+
+.team-card {
+  position: relative;
+  flex: 0 0 280px;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  transform: translateZ(0);
+  will-change: transform;
+
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 102, 255, 0.18);
+}
+
+/* --- State 1: Photo and Overlay --- */
+
+.card-photo-state {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-photo-state::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.15) 35%,
+    rgba(0, 0, 0, 0) 65%
+  );
+  pointer-events: none;
+}
+
+.member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  will-change: transform;
+
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover .member-img {
+  transform: scale(1.05);
+}
+
+.photo-overlay-info {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 24px 20px;
+  color: #ffffff;
+  text-align: center;
+  z-index: 1;
+
+  transition: opacity 0.4s ease;
+}
+
+.team-card:hover .photo-overlay-info {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.member-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  color: #ffffff;
+}
+
+.member-role {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --- State 2: Blue Hover Overlay --- */
+
+.card-blue-hover-state {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+  will-change: opacity, transform;
+
+  transition:
+    opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover .card-blue-hover-state {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* --- Hover Text --- */
+
+.hover-content-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.hover-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  transform: translateY(6px);
+
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-role {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  transform: translateY(6px);
+
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+}
+
+.hover-bio {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  margin: 0;
+  transform: translateY(6px);
+
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.team-card:hover .hover-name,
+.team-card:hover .hover-role,
+.team-card:hover .hover-bio {
+  transform: translateY(0);
+}
+
+/* --- Social and Contact Links --- */
+
+.hover-socials {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.hover-socials a {
+  position: relative;
+  z-index: 3;
+
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.85;
+  cursor: pointer;
+  pointer-events: auto;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hover-socials a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.hover-socials a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.hover-socials svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .team-section {
+    padding: 45px 40px;
+  }
+
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .team-card {
+    flex: 0 0 240px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-section {
+    padding: 40px 20px 0;
+  }
+
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .team-card {
+    flex: 0 0 240px;
+    height: 340px;
+  }
+
+  .badge-outline {
+    padding: 6px 20px;
+    font-size: 0.88rem;
+  }
+
+  .team-title {
+    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+    line-height: 1.15;
+  }
+}

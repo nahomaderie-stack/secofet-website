@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Inside Secofet Section Styles (Single Photo Card Layout)
+   ========================================================================== */
+
+.inside-secofet-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #111315;
+  padding: 75px 24px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.inside-secofet-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* --- Header Block --- */
+.inside-header {
+  text-align: left;
+  margin-bottom: 55px;
+}
+
+.inside-title {
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0b0c0e;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px 0;
+}
+
+.inside-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6b7280;
+  font-weight: 400;
+  max-width: 620px;
+  margin: 0;
+}
+
+/* --- Filter Tabs --- */
+.inside-tabs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #0b0c0e;
+}
+
+.tab-btn.active {
+  color: #0b0c0e;
+  font-weight: 800;
+}
+
+.tab-divider {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* --- Single Photo Card --- */
+.inside-single-card {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.inside-card-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom Left Title Overlay */
+.inside-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 40px 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.card-overlay-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .inside-secofet-section {
+    width: 100%;
+    background-color: #ffffff;
+    color: #111315;
+    padding: 75px 40px;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+  }
+  .inside-title {
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0b0c0e;
+    letter-spacing: -0.25px;
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 640px) {
+  .inside-secofet-section {
+    padding: 55px 20px;
+  }
+  .inside-title {
+    font-size: clamp(1.4rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0b0c0e;
+    letter-spacing: -0.25px;
+    margin: 0 0 20px 0;
+  }
+  .inside-subtitle {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #6b7280;
+    font-weight: 400;
+    max-width: 620px;
+    margin: 0;
+  }
+  .inside-header {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  .tab-btn {
+    background: transparent;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+  }
+  .inside-single-card {
+    height: clamp(320px, 62vw, 400px);
+    border-radius: 0px;
+  }
+
+  .inside-card-overlay {
+    padding: 24px 20px;
+  }
+
+  .card-overlay-title {
+    font-size: clamp(1.4rem, 4.8vw, 1.8rem);
+    line-height: 1.15;
+  }
+
+  .inside-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .inside-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .inside-tabs > * {
+    flex: 0 0 auto;
+  }
+}

@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Contact Us Section Styles
+   ========================================================================== */
+
+.contact-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #111315;
+  padding: 100px 24px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.contact-header {
+  text-align: left;
+  margin-bottom: 64px;
+}
+
+.contact-title {
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0b0c0e;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px 0;
+}
+
+.contact-subtitle {
+  font-size: 1.05rem;
+  color: #4b5563;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --- Main 2-Column Grid --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 400px;
+  gap: 56px;
+  align-items: start;
+}
+
+.column-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0b0c0e;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.column-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #6b7280;
+  margin: 0 0 28px 0;
+  text-align: left;
+  max-width: 480px;
+}
+
+/* Vertical Center Divider */
+.contact-divider {
+  width: 1px;
+  height: 100%;
+  background-color: #e5e7eb;
+}
+
+/* --- Left Form Column --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.form-row {
+  width: 100%;
+}
+
+.form-row.dual-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Grey Input Fields */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background-color: #ededed; /* Muted light grey matching mockup */
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 0.85rem;
+  color: #111315;
+  box-sizing: border-box;
+  font-family: inherit;
+  outline: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8c939d;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  background-color: #e5e5e5;
+  border-color: #000000;
+}
+
+/* Custom Select Dropdown Styling */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.btn-submit-message {
+  align-self: flex-start;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.btn-submit-message:hover {
+  background-color: #01c649;
+  color: #ffffff;
+}
+
+.btn-submit-message:active {
+  transform: scale(0.98);
+}
+
+/* --- Right Info Column --- */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Phone Pill Badges */
+.phone-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.phone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e8f5e9; /* Soft pale green tint */
+  color: #0b0c0e;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+}
+
+.phone-badge:hover {
+  background-color: #d4edda;
+}
+
+.phone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b0c0e;
+}
+
+/* Social Icons Row */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.95;
+  background-color: var(--color-primary);
+  transform: translateY(-1.4px);
+}
+.btn-submit-message.sending {
+  background: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Submit Message */
+.submit-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.submit-message.success {
+  color: #2f6b3f;
+  background: #f1f8f3;
+  border-color: #b9d8c0;
+}
+
+.submit-message.error {
+  color: #9b3d3d;
+  background: #fff4f4;
+  border-color: #e5bcbc;
+}
+
+.submit-message-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.submit-message.success .submit-message-icon {
+  background: #d8eddd;
+}
+
+.submit-message.error .submit-message-icon {
+  background: #f5dada;
+}
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .contact-section {
+    width: 100%;
+    background-color: #ffffff;
+    color: #111315;
+    padding: 75px 40px 100px;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 60px 20px;
+  }
+  .contact-header {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .contact-title {
+    font-size: clamp(2.2rem, 6.5vw, 2.1rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0b0c0e;
+    letter-spacing: -0.025em;
+    margin: 0 0 20px 0;
+  }
+  .contact-subtitle {
+    font-size: 0.85rem;
+    color: #4b5563;
+    font-weight: 400;
+    margin: 0;
+  }
+  .column-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #6b7280;
+    margin: 0 0 28px 0;
+    text-align: left;
+    max-width: 480px;
+  }
+
+  .form-row.dual-input {
+    grid-template-columns: 1fr;
+  }
+  .contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .info-block {
+    margin-bottom: 15px;
+  }
+
+  .btn-submit-message {
+    width: 100%;
+  }
+
+  .phone-badge {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}

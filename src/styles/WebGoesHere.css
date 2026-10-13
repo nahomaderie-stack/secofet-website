@@ -1,0 +1,33 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 10px;
+}
+
+.container h1 {
+    position: relative;
+    display: inline-block;
+
+    margin: 0;
+    padding-left: 35px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2.1rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+
+    color: #202020;
+}
+
+.container h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+
+    background: #4dc100;
+}
