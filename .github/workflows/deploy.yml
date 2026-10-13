@@ -1,4 +1,4 @@
-```yaml
+
 name: Deploy Secofet Website to GitHub Pages
 
 on:
