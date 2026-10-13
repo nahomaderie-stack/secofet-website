@@ -6,43 +6,31 @@ import './InitialCurtain.css';
 // CURTAIN TIMING CONTROLS
 // ==============================
 
-const WHITE_SCREEN_DURATION = 300; // White screen waiting time
-const CURTAIN_DURATION = 275; // Curtain opening animation
+const LOADER_CYCLE_DURATION = 1000;
+const MAX_LOADING_PROGRESS = 0.96;
+const MAX_LOADING_DURATION = LOADER_CYCLE_DURATION * MAX_LOADING_PROGRESS;
+const CURTAIN_DURATION = 180;
 
-function waitForWindowLoad() {
+function waitForWindowLoad(signal) {
   if (document.readyState === 'complete') return Promise.resolve();
 
   return new Promise((resolve) => {
-    window.addEventListener('load', resolve, { once: true });
+    const finish = () => {
+      window.removeEventListener('load', finish);
+      signal.removeEventListener('abort', finish);
+      resolve();
+    };
+
+    window.addEventListener('load', finish, { once: true });
+    signal.addEventListener('abort', finish, { once: true });
   });
 }
 
-function waitForImage(image) {
-  image.loading = 'eager';
-
-  const imageLoaded = image.complete
-    ? Promise.resolve()
-    : new Promise((resolve) => {
-        image.addEventListener('load', resolve, { once: true });
-        image.addEventListener('error', resolve, { once: true });
-      });
-
-  return imageLoaded.then(() =>
-    typeof image.decode === 'function'
-      ? image.decode().catch(() => {})
-      : undefined,
-  );
-}
-
-async function waitForInitialAssets() {
-  await waitForWindowLoad();
-
-  const pageImages = Array.from(document.images);
-
+function waitForInitialAssets(signal) {
   const fontsReady =
     document.fonts?.ready?.catch(() => {}) ?? Promise.resolve();
 
-  await Promise.all([fontsReady, ...pageImages.map(waitForImage)]);
+  return Promise.all([waitForWindowLoad(signal), fontsReady]);
 }
 
 function InitialCurtainProvider({ children }) {
@@ -51,24 +39,29 @@ function InitialCurtainProvider({ children }) {
   const isRevealEnabled = phase === 'opened';
   const isCurtainVisible = phase !== 'opened';
 
-  // Wait for BOTH:
-  // 1. Minimum white-screen duration
-  // 2. Initial assets to finish loading
+  // Open as soon as the page and fonts are ready, or when progress reaches 96%.
   useEffect(() => {
     let cancelled = false;
+    let opened = false;
+    const controller = new AbortController();
+    let fallbackTimer;
 
-    const minimumTime = new Promise((resolve) => {
-      window.setTimeout(resolve, WHITE_SCREEN_DURATION);
-    });
+    const openCurtain = () => {
+      if (cancelled || opened) return;
 
-    Promise.all([waitForInitialAssets(), minimumTime]).then(() => {
-      if (!cancelled) {
-        setPhase('opening');
-      }
-    });
+      opened = true;
+      window.clearTimeout(fallbackTimer);
+      controller.abort();
+      setPhase('opening');
+    };
+
+    fallbackTimer = window.setTimeout(openCurtain, MAX_LOADING_DURATION);
+    waitForInitialAssets(controller.signal).then(openCurtain);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(fallbackTimer);
+      controller.abort();
     };
   }, []);
 
@@ -81,19 +74,11 @@ function InitialCurtainProvider({ children }) {
     ).matches;
 
     const fallbackTimer = window.setTimeout(
-      () => setPhase('revealed'),
-      prefersReducedMotion ? 80 : CURTAIN_DURATION + 100,
+      () => setPhase('opened'),
+      prefersReducedMotion ? 0 : CURTAIN_DURATION + 80,
     );
 
     return () => window.clearTimeout(fallbackTimer);
-  }, [phase]);
-
-  // Give the fully revealed page a short beat before starting split-text motion.
-  useEffect(() => {
-    if (phase !== 'revealed') return undefined;
-
-    const revealTimer = window.setTimeout(() => setPhase('opened'), 350);
-    return () => window.clearTimeout(revealTimer);
   }, [phase]);
 
   const finishOpening = (event) => {
@@ -106,7 +91,7 @@ function InitialCurtainProvider({ children }) {
     }
 
     setPhase((currentPhase) =>
-      currentPhase === 'opening' ? 'revealed' : currentPhase,
+      currentPhase === 'opening' ? 'opened' : currentPhase,
     );
   };
 
@@ -118,15 +103,11 @@ function InitialCurtainProvider({ children }) {
 
       {isCurtainVisible && (
         <div
-          className={`initial-curtain ${
-            phase === 'opening'
-              ? 'is-opening'
-              : phase === 'revealed'
-                ? 'is-blank'
-                : ''
-          }`}
+          className={`initial-curtain ${phase === 'opening' ? 'is-opening' : ''}`}
           style={{
             '--curtain-duration': `${CURTAIN_DURATION}ms`,
+            '--loader-cycle-duration': `${LOADER_CYCLE_DURATION}ms`,
+            '--loader-max-progress': MAX_LOADING_PROGRESS,
           }}
           aria-hidden="true"
         >
