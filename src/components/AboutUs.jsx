@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/AboutUs.css';
-import videoImage from '../assets/Images/ethiopian-green-coffee-drying-4.webp';
+import videoImage from '../assets/Images/ethiopian-green-coffee-drying-4-2.webp';
 
 const AboutUs = () => {
   const [showVideoMessage, setShowVideoMessage] = useState(false);
