@@ -39,7 +39,7 @@ const ProcessingGrading = () => {
       <div className="processing-header-area">
         <div className="processing-header-container">
           <h2 className="processing-main-title">
-            Processing & <span className="serif-text">Grading</span>
+            Post Harvest <span className="serif-text">Processing</span>
           </h2>
           <p className="processing-header-desc">
             Explore washed and natural processing methods, raised-bed drying,
