@@ -22,11 +22,11 @@ function RequestQuotePage() {
           name="keywords"
           content="Ethiopian green coffee quote, Ethiopian green coffee pricing, Wholesale green coffee beans, Bulk green coffee supplier, Ethiopian coffee wholesale, Arabica coffee export pricing, Green coffee bulk order, Ethiopian coffee export quote"
         />
-        <link rel="canonical" href="https://secofet.com/rfq" />
+        <link rel="canonical" href="https://secofet.com/rfq/" />
 
         {/* Open Graph / Facebook & LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://secofet.com/rfq" />
+        <meta property="og:url" content="https://secofet.com/rfq/" />
         <meta
           property="og:title"
           content="Request a Wholesale Ethiopian Green Coffee Quote | Secofet"
@@ -39,7 +39,7 @@ function RequestQuotePage() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://secofet.com/rfq" />
+        <meta name="twitter:url" content="https://secofet.com/rfq/" />
         <meta
           name="twitter:title"
           content="Request a Wholesale Ethiopian Green Coffee Quote | Secofet"
@@ -56,7 +56,7 @@ function RequestQuotePage() {
             '@context': 'https://schema.org',
             '@type': 'ContactPage',
             name: 'Request Ethiopian Green Coffee Quote',
-            url: 'https://secofet.com/rfq',
+            url: 'https://secofet.com/rfq/',
             description:
               'Request direct bulk pricing and container shipment quotes for wholesale Ethiopian green coffee beans.',
             mainEntity: {

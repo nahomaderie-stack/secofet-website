@@ -19,11 +19,11 @@ function RequestSamplePage() {
           name="keywords"
           content="Ethiopian green coffee samples, Request Ethiopian coffee samples, Green coffee samples for roasters, Ethiopian Arabica coffee samples, Specialty green coffee samples, Green coffee sample request, Yirgacheffe coffee samples, Guji coffee samples, Sidama coffee samples"
         />
-        <link rel="canonical" href="https://secofet.com/request-sample" />
+        <link rel="canonical" href="https://secofet.com/request-sample/" />
 
         {/* Open Graph / Facebook & LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://secofet.com/request-sample" />
+        <meta property="og:url" content="https://secofet.com/request-sample/" />
         <meta property="og:title" content="Request Ethiopian Green Coffee Samples | Secofet" />
         <meta
           property="og:description"
@@ -33,7 +33,7 @@ function RequestSamplePage() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://secofet.com/request-sample" />
+        <meta name="twitter:url" content="https://secofet.com/request-sample/" />
         <meta name="twitter:title" content="Request Ethiopian Green Coffee Samples | Secofet" />
         <meta
           name="twitter:description"
@@ -47,7 +47,7 @@ function RequestSamplePage() {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Request Ethiopian Green Coffee Samples",
-            "url": "https://secofet.com/request-sample",
+            "url": "https://secofet.com/request-sample/",
             "description": "Form for commercial coffee roasters and importers to request evaluation samples of Ethiopian green coffee beans.",
             "mainEntity": {
               "@type": "Organization",

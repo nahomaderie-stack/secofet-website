@@ -27,11 +27,11 @@ function ContactPage() {
           name="keywords"
           content="Contact Ethiopian coffee exporter, Ethiopian coffee supplier contact, Ethiopian coffee export company, Green coffee supplier Ethiopia, Ethiopian coffee wholesale inquiries, Ethiopian green coffee sourcing, Coffee exporter Addis Ababa, Ethiopian Arabica coffee supplier, Coffee export inquiries, Green coffee business inquiries, Ethiopian coffee trading company, Secofet Trading PLC contact"
         />
-        <link rel="canonical" href="https://secofet.com/contact" />
+        <link rel="canonical" href="https://secofet.com/contact/" />
 
         {/* Open Graph / Facebook & LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://secofet.com/contact" />
+        <meta property="og:url" content="https://secofet.com/contact/" />
         <meta
           property="og:title"
           content="Contact Secofet Trading PLC | Ethiopian Coffee Exporter"
@@ -47,7 +47,7 @@ function ContactPage() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://secofet.com/contact" />
+        <meta name="twitter:url" content="https://secofet.com/contact/" />
         <meta
           name="twitter:title"
           content="Contact Secofet Trading PLC | Ethiopian Coffee Exporter"
@@ -68,7 +68,7 @@ function ContactPage() {
             '@type': 'LocalBusiness',
             name: 'Secofet Trading PLC',
             image: logoUrl,
-            url: 'https://secofet.com/contact',
+            url: 'https://secofet.com/contact/',
             telephone: '+251-11-XXXXXXX',
             email: 'info@secofet.com',
             priceRange: '$$$',

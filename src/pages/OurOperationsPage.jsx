@@ -26,11 +26,11 @@ function OurOperations() {
           name="keywords"
           content="Ethiopian coffee processing, Ethiopian coffee grading, Ethiopian coffee export process, Green coffee quality control, Ethiopian coffee processing methods, Green coffee sorting and grading, Coffee quality assessment, Washed vs. natural Ethiopian coffee, Green coffee processing, Ethiopian coffee quality standards, Coffee export preparation, Green coffee handling and storage, Ethiopian coffee traceability, Coffee export logistics in Ethiopia"
         />
-        <link rel="canonical" href="https://secofet.com/operations" />
+        <link rel="canonical" href="https://secofet.com/operations/" />
 
         {/* Open Graph / Facebook & LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://secofet.com/operations" />
+        <meta property="og:url" content="https://secofet.com/operations/" />
         <meta
           property="og:title"
           content="Ethiopian Coffee Processing & Export Operations | Secofet"
@@ -46,7 +46,7 @@ function OurOperations() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://secofet.com/operations" />
+        <meta name="twitter:url" content="https://secofet.com/operations/" />
         <meta
           name="twitter:title"
           content="Ethiopian Coffee Processing & Export Operations | Secofet"

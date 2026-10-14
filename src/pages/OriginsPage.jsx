@@ -34,11 +34,11 @@ function OriginsPage() {
           name="keywords"
           content="Ethiopian coffee origins, Yirgacheffe coffee, Guji coffee Ethiopia, Sidama coffee, Ethiopian single origin coffee, Ethiopian coffee regions, Ethiopian specialty coffee origins, Yirgacheffe green coffee beans, Guji green coffee beans, Sidama green coffee beans, Ethiopian Arabica coffee origins, Coffee-growing regions of Ethiopia, Ethiopian coffee flavor profiles, Coffee sourcing by origin, Washed Ethiopian coffee, Natural Ethiopian coffee, Ethiopian coffee traceability"
         />
-        <link rel="canonical" href="https://secofet.com/origins" />
+        <link rel="canonical" href="https://secofet.com/origins/" />
 
         {/* Open Graph / Facebook & LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://secofet.com/origins" />
+        <meta property="og:url" content="https://secofet.com/origins/" />
         <meta
           property="og:title"
           content="Ethiopian Coffee Origins & Regions | Secofet Sourcing"
@@ -54,7 +54,7 @@ function OriginsPage() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://secofet.com/origins" />
+        <meta name="twitter:url" content="https://secofet.com/origins/" />
         <meta
           name="twitter:title"
           content="Ethiopian Coffee Origins & Regions | Secofet Sourcing"
@@ -76,7 +76,7 @@ function OriginsPage() {
             name: 'Ethiopian Specialty Coffee Origins',
             description:
               'A guide to famous coffee-growing regions of Ethiopia providing single-origin washed and natural Arabica beans.',
-            url: 'https://secofet.com/origins',
+            url: 'https://secofet.com/origins/',
             itemListElement: [
               {
                 '@type': 'ListItem',

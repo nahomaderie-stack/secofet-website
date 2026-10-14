@@ -29,11 +29,11 @@ function OurCoffeesPage() {
           name="keywords"
           content="Ethiopian green coffee beans, Ethiopian Arabica coffee, Green coffee beans wholesale, Ethiopian green coffee supplier, Bulk green coffee beans, Wholesale Arabica coffee beans, Specialty green coffee beans, Unroasted Ethiopian coffee beans, Green coffee beans for roasters, Ethiopian coffee for importers, Commercial grade green coffee beans, Ethiopian coffee grades, Yirgacheffe green coffee beans, Guji green coffee beans, Sidama green coffee beans"
         />
-        <link rel="canonical" href="https://secofet.com/our-coffees" />
+        <link rel="canonical" href="https://secofet.com/our-coffees/" />
 
         {/* Open Graph / Facebook & LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://secofet.com/our-coffees" />
+        <meta property="og:url" content="https://secofet.com/our-coffees/" />
         <meta
           property="og:title"
           content="Wholesale Ethiopian Green Coffee Beans | Secofet"
@@ -46,7 +46,7 @@ function OurCoffeesPage() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://secofet.com/our-coffees" />
+        <meta name="twitter:url" content="https://secofet.com/our-coffees/" />
         <meta
           name="twitter:title"
           content="Wholesale Ethiopian Green Coffee Beans | Secofet"
@@ -65,7 +65,7 @@ function OurCoffeesPage() {
             name: 'Ethiopian Green Coffee Beans Catalog',
             description:
               'Wholesale unroasted Ethiopian Arabica green coffee beans from premier origin regions including Yirgacheffe, Guji, and Sidama.',
-            url: 'https://secofet.com/our-coffees',
+            url: 'https://secofet.com/our-coffees/',
             itemListElement: [
               {
                 '@type': 'ListItem',

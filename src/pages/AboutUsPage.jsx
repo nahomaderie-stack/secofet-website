@@ -30,11 +30,11 @@ function AboutUsPage() {
           name="keywords"
           content="Ethiopian coffee export company, Ethiopian coffee exporter, Ethiopian green coffee supplier, Ethiopian coffee trading company, Green coffee sourcing company, Ethiopian Arabica coffee exporter, Coffee export company in Ethiopia, Ethiopian coffee sourcing, Green coffee quality control, Reliable green coffee supplier, Ethiopian coffee export services, International coffee buyers, Specialty coffee sourcing from Ethiopia"
         />
-        <link rel="canonical" href="https://secofet.com/about" />
+        <link rel="canonical" href="https://secofet.com/about/" />
 
         {/* Open Graph / Facebook & LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://secofet.com/about" />
+        <meta property="og:url" content="https://secofet.com/about/" />
         <meta
           property="og:title"
           content="About Secofet | Ethiopian Coffee Export Company"
@@ -47,7 +47,7 @@ function AboutUsPage() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://secofet.com/about" />
+        <meta name="twitter:url" content="https://secofet.com/about/" />
         <meta
           name="twitter:title"
           content="About Secofet | Ethiopian Coffee Export Company"
@@ -64,7 +64,7 @@ function AboutUsPage() {
             '@context': 'https://schema.org',
             '@type': 'AboutPage',
             name: 'About Secofet',
-            url: 'https://secofet.com/about',
+            url: 'https://secofet.com/about/',
             description:
               'Secofet is an established Ethiopian coffee export company specializing in green coffee sourcing, quality control, and international export services.',
             mainEntity: {
