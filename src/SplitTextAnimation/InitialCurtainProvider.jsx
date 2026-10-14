@@ -9,7 +9,7 @@ import './InitialCurtain.css';
 const LOADER_CYCLE_DURATION = 1000;
 const MAX_LOADING_PROGRESS = 0.95;
 const MAX_LOADING_DURATION = LOADER_CYCLE_DURATION * MAX_LOADING_PROGRESS;
-const CURTAIN_DURATION = 1000;
+const CURTAIN_DURATION = 1050;
 
 function waitForWindowLoad(signal) {
   if (document.readyState === 'complete') return Promise.resolve();

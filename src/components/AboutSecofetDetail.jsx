@@ -18,7 +18,7 @@ const statsData = [
   },
   {
     id: 3,
-    targetValue: 115,
+    targetValue: 1200,
     unit: 'MT',
     suffix: '+',
     label: 'annual export volume',

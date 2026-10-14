@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/AboutSecofetBanner.css';
 
-import heroImg from '../assets/Images/ethiopian-green-coffee-farmers-drying-3.jpg';
+import heroImg from '../assets/Images/ethiopian-green-coffee-farmers-drying-3.webp';
 import heroImg1 from '../assets/Images/ethiopian-green-coffee-drying-6.webp';
 import heroImg2 from '../assets/Images/ethiopian-green-coffee-drying-19.webp';
 import heroImg3 from '../assets/Images/ethiopian-green-coffee-drying-18.webp';
