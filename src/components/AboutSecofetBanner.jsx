@@ -47,9 +47,9 @@ const AboutSecofetBanner = () => {
     <section className="about-secofet-section">
       <div className="about-secofet-container">
         {/* Section Heading */}
-        <h2 className="about-secofet-title">
+        <h1 className="about-secofet-title">
           About <span className="serif-text">Secofet.</span>
-        </h2>
+        </h1>
 
         {/* Carousel Card Box */}
         <div className="carousel-card">

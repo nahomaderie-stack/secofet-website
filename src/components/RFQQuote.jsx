@@ -95,9 +95,9 @@ const RFQQuote = ({ title = 'Quote.' }) => {
       <div className="rfq-container">
         {/* Header Block */}
         <div className="rfq-header">
-          <h2 className="rfq-title">
+          <h1 className="rfq-title">
             Request a <span className="serif-text">{title}</span>
-          </h2>
+          </h1>
           <p className="rfq-subtitle">
             Tell us what you're looking for, and our team will prepare a
             tailored quotation based on your requirements. Share the details of

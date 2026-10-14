@@ -79,17 +79,17 @@ const InsideSecofet = () => {
       <div className="inside-secofet-container">
         {/* Header Block */}
         <div className="inside-header">
-          <h2 className="inside-title">
+          <h1 className="inside-title">
             Explore the <span className="serif-text">origins, </span>
             <span className="serif-text">
               {' '}
               <br />
               processes,
             </span>
-            and export <span className="serif-text">journey</span>
+            {' '}and export <span className="serif-text">journey</span>
             <br />
             behind Secofet.
-          </h2>
+          </h1>
           <p className="inside-subtitle">
             Go beyond the coffee and discover the origins, people, traditions,
             and careful processes that shape Secofet coffees from farm to global

@@ -90,11 +90,11 @@ const ContactTeam = () => {
       <div className="contact-container">
         {/* Top Header */}
         <div className="contact-header">
-          <h2 className="contact-title">
+          <h1 className="contact-title">
             Contact our
             <br />
             friendly <span className="serif-text">team.</span>
-          </h2>
+          </h1>
 
           <p className="contact-subtitle">
             We’re here to help. Contact us for any inquiries or assistance.

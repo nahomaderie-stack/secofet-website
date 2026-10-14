@@ -120,9 +120,9 @@ const RFQSample = ({ title = 'Sample.' }) => {
     <section className="rfq-section" id="rfq">
       <div className="rfq-container">
         <div className="rfq-header">
-          <h2 className="rfq-title">
+          <h1 className="rfq-title">
             Request a <span className="serif-text">{title}</span>
-          </h2>
+          </h1>
 
           <p className="rfq-subtitle">
             Tell us what you're looking for, and our team will prepare a sample

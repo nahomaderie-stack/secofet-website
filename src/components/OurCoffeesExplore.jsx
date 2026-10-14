@@ -24,6 +24,7 @@ const OurCoffeesExplore = () => {
             className="coffee-hero-title-line"
             text="Explore our carefully"
           />
+          {' '}
           <span className="coffee-hero-title-line coffee-hero-title-line--mixed">
             <SplitTextReveal as="span" text="sourced" />{' '}
             <SplitTextReveal
@@ -32,6 +33,7 @@ const OurCoffeesExplore = () => {
               text="Ethiopian Arabica"
             />
           </span>
+          {' '}
           <SplitTextReveal as="span" className="coffee-hero-title-line" text="coffees." />
         </h1>
 
