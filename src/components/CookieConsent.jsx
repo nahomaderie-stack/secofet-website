@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import '../styles/CookieConsent.css';
 
 const readCookieConsent = () => {
+  if (typeof window === 'undefined') {
+    return { hasSavedConsent: false, analytics: false, marketing: false };
+  }
+
   let savedConsent;
 
   try {

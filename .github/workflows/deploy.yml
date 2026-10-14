@@ -41,16 +41,6 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
-      - name: Generate route entry pages
-        run: |
-          for route in about our-coffees origins operations contact rfq request-sample terms privacy cookie; do
-            mkdir -p "dist/$route"
-            cp dist/index.html "dist/$route/index.html"
-          done
-
-      - name: Configure SPA routing
-        run: cp dist/index.html dist/404.html
-
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
         with:
