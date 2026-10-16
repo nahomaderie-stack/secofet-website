@@ -52,7 +52,7 @@
 }
 
 .hero-main-title {
-  font-size: var(--text-hero-primary);
+  font-size: 58px;
   font-weight: var(--font-bold);
   line-height: 1.1;
   color: var(--color-text-light);

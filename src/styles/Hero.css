@@ -147,7 +147,7 @@
 
 /* Title & Font Mix */
 .hero-section .hero-title {
-  font-size: 52px;
+  font-size: 50px;
   font-weight: var(--font-bold);
   line-height: var(--leading-heading);
   letter-spacing: -0.2px;
@@ -156,7 +156,7 @@
 }
 .hero-section .serif-text {
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: var(--text-hero-primary);
+  font-size: 58px;
   font-style: italic;
 }
 
