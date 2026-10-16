@@ -96,11 +96,12 @@
   margin-bottom: 24px;
 }
 
-.info-icon {
+.origin-card-icon {
   width: 104px;
   height: 104px;
   border-radius: 50%;
   background-color: #9ca3af;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,17 +110,14 @@
     color 0.35s ease;
 }
 
-.origins-grid-card:hover .info-icon {
+.origins-grid-card:hover .origin-card-icon {
   background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }
 
-.info-icon span {
-  font-family: 'Playfair Display', 'Georgia', serif;
-  font-style: italic;
-  font-size: 3.5rem;
-  color: #ffffff;
-  line-height: 1;
+.origin-card-icon svg {
+  width: 54px;
+  height: 54px;
 }
 
 /* Card Description Text */

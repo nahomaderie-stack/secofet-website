@@ -158,6 +158,14 @@
 ======================================== */
 
 :root {
+  /* Shared page frame: 1280px of content with a 24px desktop gutter. */
+  --layout-content-max: 1280px;
+  --layout-gutter: 24px;
+  --layout-shell-max: calc(
+    var(--layout-content-max) + var(--layout-gutter) + var(--layout-gutter)
+  );
+  --hero-title-bottom-gap: 16px;
+
   /* ========================================
    FONT FAMILIES
 ======================================== */
@@ -311,4 +319,10 @@
   /* Accent */
   --color-accent: #069f39;
   --color-secondary-accent: #38b000;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --hero-title-bottom-gap: 14px;
+  }
 }

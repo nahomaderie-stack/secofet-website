@@ -49,9 +49,9 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--layout-shell-max);
   margin: 0 auto;
-  padding: 295px 2px 0px;
+  padding: clamp(190px, 27vh, 295px) var(--layout-gutter) 0;
   box-sizing: border-box;
 }
 
@@ -61,7 +61,7 @@
   max-width: 1200px;
   font-weight: 700;
   line-height: var(--leading-heading);
-  margin: 0 0 16px 0;
+  margin: 0 0 var(--hero-title-bottom-gap) 0;
   letter-spacing: -0.2px;
   color: #ffffff;
 }
@@ -173,7 +173,6 @@
   .origins-hero-title {
     font-size: clamp(34px, 4.8vw, 45px);
     line-height: 1.1;
-    margin: 0 0 16px;
   }
 
   .origins-hero-description {
@@ -195,7 +194,6 @@
   .origins-hero-title {
     font-size: clamp(1.5rem, 6.5vw, 2.1rem);
     line-height: 1.15;
-    margin: 0 0 14px;
   }
 
   .origins-hero-description {

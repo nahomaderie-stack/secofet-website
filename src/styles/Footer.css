@@ -13,13 +13,13 @@
 /* Full Width Inner Container */
 .footer-card {
   width: 100%;
-  max-width: 1315px;
+  max-width: var(--layout-shell-max);
   /* Constrains inner content readability while card stretches */
   margin: 0 auto;
   background-color: #0a0b0b;
   color: #ffffff;
   border-radius: 0;
-  padding: 85px 32px;
+  padding: 85px var(--layout-gutter);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

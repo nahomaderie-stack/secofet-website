@@ -20,7 +20,7 @@
 .export-text-panel {
   flex: 1;
   background-color: #000000;
-  padding: 25px 0px 25px 200px;
+  padding: 25px clamp(24px, calc(25vw - 300px), 200px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
