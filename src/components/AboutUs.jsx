@@ -88,6 +88,10 @@ const AboutUs = () => {
             <img
               src={videoImage}
               alt="Ethiopian Coffee Plantation Drying Beds"
+              width="1200"
+              height="900"
+              loading="lazy"
+              decoding="async"
               className="plantation-img"
             />
 

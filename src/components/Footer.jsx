@@ -40,7 +40,14 @@ const Footer = () => {
           <div className="footer-brand">
             <div className="footer-logo">
               <Link to="/">
-                <img src={Secofetlogo} alt="Secofet" />
+                <img
+                  src={Secofetlogo}
+                  width="2221"
+                  height="543"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Secofet"
+                />
               </Link>
             </div>
           </div>

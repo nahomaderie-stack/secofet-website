@@ -55,7 +55,7 @@ const Header = () => {
         {/* Logo */}
         <div className="header-logo">
           <Link to="/">
-            <img src={Secofetlogo} alt="Secofet" />
+            <img src={Secofetlogo} width="595" height="353" alt="Secofet" />
           </Link>
         </div>
 

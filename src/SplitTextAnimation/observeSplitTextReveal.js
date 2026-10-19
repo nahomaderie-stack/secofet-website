@@ -158,6 +158,7 @@ export function prepareSplitTextReveal(root) {
   if (
     !root ||
     !('IntersectionObserver' in window) ||
+    window.matchMedia('(max-width: 640px)').matches ||
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
   ) {
     return {

@@ -153,6 +153,10 @@ const OurOperations = () => {
               key={activeOperation}
               src={currentOperation.image}
               alt={currentOperation.name}
+              width="1200"
+              height="900"
+              loading="lazy"
+              decoding="async"
               className="origin-hero-img"
             />
 

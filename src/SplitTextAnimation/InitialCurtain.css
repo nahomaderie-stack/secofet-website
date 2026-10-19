@@ -43,6 +43,12 @@
     forwards;
 }
 
+@media (max-width: 640px) {
+  .initial-curtain {
+    display: none;
+  }
+}
+
 @keyframes curtain-loader-progress {
   0% {
     transform: scaleX(0);

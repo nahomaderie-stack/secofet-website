@@ -1,10 +1,24 @@
 import { Link } from 'react-router-dom';
 import '../styles/Hero.css';
-import coffeeDryingImg from '../assets/Images/ethiopian-green-coffee-farmers-hero.webp';
+import heroDesktopImage from '../assets/Images/ethiopian-green-coffee-farmers-hero-1.jpg';
+import heroMobileImage from '../assets/Images/ethiopian-green-coffee-farmers-hero.webp';
 
 const Hero = () => {
   return (
     <section className="hero-section">
+      <img
+        className="hero-background"
+        src={heroDesktopImage}
+        srcSet={`${heroMobileImage} 1200w, ${heroDesktopImage} 1500w`}
+        sizes="100vw"
+        width="1500"
+        height="837"
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        decoding="async"
+      />
+
       {/* Background Overlay */}
       <div className="hero-overlay"></div>
 

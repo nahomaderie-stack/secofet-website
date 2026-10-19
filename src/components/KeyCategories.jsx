@@ -74,7 +74,15 @@ const KeyCategories = () => {
                 onClick={() => setActiveIndex(index)}
               >
                 {/* Background Image & Overlay */}
-                <img src={cat.image} alt={cat.title} className="card-bg-img" />
+                <img
+                  src={cat.image}
+                  alt={cat.title}
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                  className="card-bg-img"
+                />
                 <div className="card-overlay"></div>
 
                 {/* Card Content */}

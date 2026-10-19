@@ -41,6 +41,11 @@ function InitialCurtainProvider({ children }) {
 
   // Open as soon as the page and fonts are ready, or when progress reaches 96%.
   useEffect(() => {
+    if (window.matchMedia('(max-width: 640px)').matches) {
+      setPhase('opened');
+      return undefined;
+    }
+
     let cancelled = false;
     let opened = false;
     const controller = new AbortController();
