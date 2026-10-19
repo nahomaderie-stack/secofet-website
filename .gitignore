@@ -15,6 +15,10 @@ dist-ssr
 # Environment variables
 .env
 
+# Generated project documentation
+DOCUMENTATION.md
+DEVELOPER_GUIDE.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
