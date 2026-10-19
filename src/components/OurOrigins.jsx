@@ -6,7 +6,10 @@ import '../styles/OurOrigins.css';
 
 import yirgacheffeImg from '../assets/Images/ethiopian-green-coffee-quality-inspection-1.webp';
 import coffeeFarmImg from '../assets/Images/ethiopian-green-coffee-3.webp';
+import coffeeFarmMobileImg from '../assets/Images/ethiopian-green-coffee-3-mobile.webp';
 import coffeeDryingImg from '../assets/Images/ethiopian-green-coffee-warehouse-1.webp';
+import coffeeDryingMobileImg from '../assets/Images/ethiopian-green-coffee-warehouse-1-mobile.webp';
+import yirgacheffeMobileImg from '../assets/Images/ethiopian-green-coffee-quality-inspection-1-mobile.webp';
 
 const operationsData = [
   {
@@ -15,6 +18,7 @@ const operationsData = [
     description:
       'We connect international buyers with Ethiopian green coffee sourced from established growing regions, including Yirgacheffe, with a focus on origin, buyer requirements, and lot selection.',
     image: coffeeFarmImg,
+    mobileImage: coffeeFarmMobileImg,
   },
   {
     id: '02',
@@ -22,6 +26,7 @@ const operationsData = [
     description:
       'Every coffee selection begins with understanding the buyer’s needs. We consider coffee grade, processing method, origin, and lot characteristics to help match each order with the right specifications.',
     image: yirgacheffeImg,
+    mobileImage: yirgacheffeMobileImg,
   },
   {
     id: '03',
@@ -29,6 +34,7 @@ const operationsData = [
     description:
       'We coordinate export requirements and shipment arrangements to connect Ethiopian coffee with international markets, prioritizing clear communication, dependable service, and lasting business relationships.',
     image: coffeeDryingImg,
+    mobileImage: coffeeDryingMobileImg,
   },
 ];
 
@@ -149,16 +155,23 @@ const OurOperations = () => {
 
           {/* Right Image Display */}
           <div className="origins-card-right">
-            <img
-              key={activeOperation}
-              src={currentOperation.image}
-              alt={currentOperation.name}
-              width="1200"
-              height="900"
-              loading="lazy"
-              decoding="async"
-              className="origin-hero-img"
-            />
+            <picture className="origins-image-picture">
+              <source
+                media="(max-width: 640px)"
+                srcSet={currentOperation.mobileImage}
+                type="image/webp"
+              />
+              <img
+                key={activeOperation}
+                src={currentOperation.image}
+                alt={currentOperation.name}
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                className="origin-hero-img"
+              />
+            </picture>
 
             {/* Carousel Indicators */}
             <div className="origin-dots">

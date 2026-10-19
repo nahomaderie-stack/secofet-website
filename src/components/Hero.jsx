@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/Hero.css';
 import heroDesktopImage from '../assets/Images/ethiopian-green-coffee-farmers-hero-1.jpg';
-import heroMobileImage from '../assets/Images/ethiopian-green-coffee-farmers-hero.webp';
+import heroMobileImage from '../assets/Images/ethiopian-green-coffee-farmers-hero-mobile.webp';
 
 const Hero = () => {
   return (
@@ -9,8 +9,8 @@ const Hero = () => {
       <img
         className="hero-background"
         src={heroDesktopImage}
-        srcSet={`${heroMobileImage} 1200w, ${heroDesktopImage} 1500w`}
-        sizes="100vw"
+        srcSet={`${heroMobileImage} 960w, ${heroDesktopImage} 1500w`}
+        sizes="(max-width: 640px) 100vw, 1500px"
         width="1500"
         height="837"
         alt=""

@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import '../styles/KeyCategories.css';
 
 import yirgacheffeImg from '../assets/Images/ethiopian-green-coffee-farm-yirgacheffe.webp';
+import yirgacheffeMobileImg from '../assets/Images/ethiopian-green-coffee-farm-yirgacheffe-mobile.webp';
 import coffeeFarmImg from '../assets/Images/ethiopian-green-coffee-farmers-drying-7.webp';
+import coffeeFarmMobileImg from '../assets/Images/ethiopian-green-coffee-farmers-drying-7-mobile.webp';
 import coffeeDryingImg from '../assets/Images/ethiopian-green-coffee-drying-2.webp';
+import coffeeDryingMobileImg from '../assets/Images/ethiopian-green-coffee-drying-2-mobile.webp';
 
 const categories = [
   {
@@ -14,6 +17,7 @@ const categories = [
     description:
       'Renowned globally for its intense floral aromas, delicate tea-like body, and crisp citrus acidity.',
     image: yirgacheffeImg,
+    mobileImage: yirgacheffeMobileImg,
     link: '/origins',
   },
   {
@@ -23,6 +27,7 @@ const categories = [
     description:
       'Celebrated for its well-balanced cup profile, bright acidity, and complex lemon, berry, and herbal notes.',
     image: coffeeFarmImg,
+    mobileImage: coffeeFarmMobileImg,
     link: '/origins',
   },
   {
@@ -32,6 +37,7 @@ const categories = [
     description:
       'Prized for its complex, fruit-forward flavors, elegant body, and distinct notes of stone fruit, jasmine, and dark berries.',
     image: coffeeDryingImg,
+    mobileImage: coffeeDryingMobileImg,
     link: '/origins',
   },
 ];
@@ -74,15 +80,22 @@ const KeyCategories = () => {
                 onClick={() => setActiveIndex(index)}
               >
                 {/* Background Image & Overlay */}
-                <img
-                  src={cat.image}
-                  alt={cat.title}
-                  width="1200"
-                  height="900"
-                  loading="lazy"
-                  decoding="async"
-                  className="card-bg-img"
-                />
+                <picture className="category-card-picture">
+                  <source
+                    media="(max-width: 640px)"
+                    srcSet={cat.mobileImage}
+                    type="image/webp"
+                  />
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    className="card-bg-img"
+                  />
+                </picture>
                 <div className="card-overlay"></div>
 
                 {/* Card Content */}

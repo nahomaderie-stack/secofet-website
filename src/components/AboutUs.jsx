@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/AboutUs.css';
 import videoImage from '../assets/Images/ethiopian-green-coffee-drying-4-2.webp';
+import videoMobileImage from '../assets/Images/ethiopian-green-coffee-drying-4-2-mobile.webp';
 
 const AboutUs = () => {
   const [showVideoMessage, setShowVideoMessage] = useState(false);
@@ -85,15 +86,22 @@ const AboutUs = () => {
         <div className="about-video-card">
           {/* Background Image / Plantation View */}
           <div className="video-background">
-            <img
-              src={videoImage}
-              alt="Ethiopian Coffee Plantation Drying Beds"
-              width="1200"
-              height="900"
-              loading="lazy"
-              decoding="async"
-              className="plantation-img"
-            />
+            <picture className="about-video-picture">
+              <source
+                media="(max-width: 640px)"
+                srcSet={videoMobileImage}
+                type="image/webp"
+              />
+              <img
+                src={videoImage}
+                alt="Ethiopian Coffee Plantation Drying Beds"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                className="plantation-img"
+              />
+            </picture>
 
             {/* Center Play Button Overlay */}
             <button

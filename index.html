@@ -57,14 +57,45 @@
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
+        function loadTagManager() {
+          w[l] = w[l] || [];
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        }
+
+        if (w.matchMedia('(max-width: 640px)').matches) {
+          var scheduled = false;
+          function scheduleTagManager() {
+            if (scheduled) return;
+            scheduled = true;
+            w.removeEventListener('load', scheduleTagManager);
+            w.removeEventListener('pointerdown', scheduleTagManager);
+            w.removeEventListener('keydown', scheduleTagManager);
+            if (w.requestIdleCallback) {
+              w.requestIdleCallback(loadTagManager, { timeout: 2000 });
+            } else {
+              w.setTimeout(loadTagManager, 1000);
+            }
+          }
+
+          w.addEventListener('pointerdown', scheduleTagManager, {
+            once: true,
+            passive: true,
+          });
+          w.addEventListener('keydown', scheduleTagManager, { once: true });
+          if (d.readyState === 'complete') {
+            scheduleTagManager();
+          } else {
+            w.addEventListener('load', scheduleTagManager, { once: true });
+          }
+        } else {
+          loadTagManager();
+        }
       })(window, document, 'script', 'dataLayer', 'GTM-NZDJ4RLP');
     </script>
     <!-- End Google Tag Manager -->
