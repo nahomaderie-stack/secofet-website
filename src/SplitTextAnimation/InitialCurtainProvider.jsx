@@ -7,7 +7,7 @@ import './InitialCurtain.css';
 // ==============================
 
 const LOADER_CYCLE_DURATION = 1200;
-const MAX_LOADING_PROGRESS = 0.96;
+const MAX_LOADING_PROGRESS = 0.99;
 const MAX_LOADING_DURATION = LOADER_CYCLE_DURATION * MAX_LOADING_PROGRESS;
 const CURTAIN_DURATION = 1000;
 
