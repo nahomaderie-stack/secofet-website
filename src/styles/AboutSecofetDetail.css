@@ -172,7 +172,7 @@
     margin-bottom: 10px;
   }
   .detail-title {
-    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+    font-size: clamp(1.25rem, 6.5vw, 2.1rem);
     line-height: 1.15;
     font-weight: 800;
     color: #0b0c0e;

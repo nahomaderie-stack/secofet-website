@@ -121,7 +121,7 @@
     display: block;
   }
   .what-we-do-title {
-    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+    font-size: clamp(1.45rem, 6.5vw, 2.1rem);
     font-weight: 800;
     line-height: 1.15;
     margin: 0 0 20px 0;
