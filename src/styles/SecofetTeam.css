@@ -362,7 +362,7 @@
   }
 
   .team-title {
-    font-size: clamp(1.5rem, 6.5vw, 2.1rem);
+    font-size: clamp(1.4rem, 6.5vw, 2.1rem);
     line-height: 1.15;
   }
 }
