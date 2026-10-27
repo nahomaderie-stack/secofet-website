@@ -83,7 +83,7 @@ function AboutUsPage() {
         </script>
       </Helmet>
 
-      <SplitTextPage>
+      <SplitTextPage desktopOnly>
         <AboutSecofetBanner />
         <AboutSecofetDetail />
         <WhatWeDo />

@@ -99,7 +99,7 @@ function ContactPage() {
         </script>
       </Helmet>
 
-      <SplitTextPage>
+      <SplitTextPage desktopOnly>
         <ContactTeam />
         <ContactMap />
         <ContactFAQ />

@@ -92,7 +92,7 @@ function OurOperations() {
         </script>
       </Helmet>
 
-      <SplitTextPage>
+      <SplitTextPage desktopOnly>
         {/* <InsideSecofetNav /> */}
         <InsideSecofet />
         <CoffeeFarmsGrid />

@@ -158,7 +158,6 @@ export function prepareSplitTextReveal(root) {
   if (
     !root ||
     !('IntersectionObserver' in window) ||
-    window.matchMedia('(max-width: 640px)').matches ||
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
   ) {
     return {
@@ -210,7 +209,10 @@ export function prepareSplitTextReveal(root) {
             );
           });
         },
-        { threshold: 0.12, rootMargin: '0px 0px -6% 0px' },
+        {
+          threshold: 0.12,
+          rootMargin: '0px 0px -6% 0px',
+        },
       );
 
       root.querySelectorAll('.split-reveal-block').forEach((block) => {

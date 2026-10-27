@@ -104,7 +104,7 @@ function OriginsPage() {
         </script>
       </Helmet>
 
-      <SplitTextPage>
+      <SplitTextPage desktopOnly>
         <OriginsHero />
         <OriginsCard
           selectedOrigin={selectedOrigin}

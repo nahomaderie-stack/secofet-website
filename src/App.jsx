@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SplitTextPage from './SplitTextAnimation/SplitTextPage';
 
 import HomePage from './pages/HomePage';
 import CookieConsent from './components/CookieConsent';
@@ -44,6 +45,7 @@ function lazyPage(Page) {
 }
 
 function App({ pageComponents = lazyPageComponents } = {}) {
+  const { pathname } = useLocation();
   const {
     AboutUsPage,
     OurCoffeesPage,
@@ -63,24 +65,25 @@ function App({ pageComponents = lazyPageComponents } = {}) {
       <div className="app-container">
         <ScrollToTop />
         <Header />
-
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={lazyPage(AboutUsPage)} />
-          <Route path="/our-coffees" element={lazyPage(OurCoffeesPage)} />
-          <Route path="/origins" element={lazyPage(OriginsPage)} />
-          <Route path="/operations" element={lazyPage(OurOperationsPage)} />
-          <Route path="/contact" element={lazyPage(ContactPage)} />
-          <Route path="/rfq" element={lazyPage(RequestQuotePage)} />
-          <Route
-            path="/request-sample"
-            element={lazyPage(RequestSamplePage)}
-          />
-          <Route path="/terms" element={lazyPage(TermsConditionsPage)} />
-          <Route path="/privacy" element={lazyPage(PrivacyPolicyPage)} />
-          <Route path="/cookie" element={lazyPage(CookiePolicyPage)} />
-          <Route path="*" element={lazyPage(NotFoundPage)} />
-        </Routes>
+        <SplitTextPage key={pathname} mobileOnly>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={lazyPage(AboutUsPage)} />
+            <Route path="/our-coffees" element={lazyPage(OurCoffeesPage)} />
+            <Route path="/origins" element={lazyPage(OriginsPage)} />
+            <Route path="/operations" element={lazyPage(OurOperationsPage)} />
+            <Route path="/contact" element={lazyPage(ContactPage)} />
+            <Route path="/rfq" element={lazyPage(RequestQuotePage)} />
+            <Route
+              path="/request-sample"
+              element={lazyPage(RequestSamplePage)}
+            />
+            <Route path="/terms" element={lazyPage(TermsConditionsPage)} />
+            <Route path="/privacy" element={lazyPage(PrivacyPolicyPage)} />
+            <Route path="/cookie" element={lazyPage(CookiePolicyPage)} />
+            <Route path="*" element={lazyPage(NotFoundPage)} />
+          </Routes>
+        </SplitTextPage>
 
         <Footer />
         <CookieConsent />

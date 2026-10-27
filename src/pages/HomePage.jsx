@@ -21,7 +21,7 @@ function HomePage() {
         <link rel="canonical" href="https://secofet.com/" />
       </Helmet>
 
-      <SplitTextPage>
+      <SplitTextPage desktopOnly>
         <Hero />
         <AboutUs />
         <KeyCategories />

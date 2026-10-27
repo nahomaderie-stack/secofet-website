@@ -93,7 +93,7 @@ function OurCoffeesPage() {
         </script>
       </Helmet>
 
-      <SplitTextPage>
+      <SplitTextPage desktopOnly>
         <OurCoffeesExplore />
         <KeyCategoriesCoffees />
         <OurCoffeesGrid />
