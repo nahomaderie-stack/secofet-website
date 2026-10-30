@@ -1,0 +1,31 @@
+
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send database activity to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          response=$(curl -sS -w "\n%{http_code}" \
+            "${SUPABASE_URL}/rest/v1/contact_messages?select=id&limit=1" \
+            -H "apikey: ${SUPABASE_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_KEY}")
+
+          status=$(echo "$response" | tail -n 1)
+
+          if [ "$status" -lt 200 ] || [ "$status" -ge 300 ]; then
+            echo "Supabase request failed with HTTP $status"
+            exit 1
+          fi
+
+          echo "Supabase database request successful: HTTP $status"
